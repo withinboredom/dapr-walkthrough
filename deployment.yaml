@@ -1,0 +1,32 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: picker
+  labels:
+    app: picker
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: picker
+  template:
+    metadata:
+      labels:
+        app: picker
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "picker"
+        dapr.io/app-port: "80"
+    spec:
+      containers:
+        - name: picker
+          image: withinboredom/picker:latest
+          ports:
+            - containerPort: 9000
+          imagePullPolicy: Always
+        - name: caddy
+          image: withinboredom/picker:caddy
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always

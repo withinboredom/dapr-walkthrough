@@ -1,6 +1,10 @@
 <?php
 
 use Dapr\Actors\Generators\ProxyFactory;
+use Dapr\PubSub\Subscription;
+
+use Picker\Actors\Bin\BinActor;
+use Picker\Actors\Inventory\InventoryActor;
 
 use function DI\env;
 
@@ -9,10 +13,14 @@ return [
     'dapr.actors.proxy.generation' => ProxyFactory::GENERATED,
 
     // put any subscriptions here
-    'dapr.subscriptions'           => [],
+    'dapr.subscriptions'           => [
+        \DI\factory(
+            fn() => new Subscription('pubsub', 'receive', '/events/receivedItem')
+        ),
+    ],
 
     // if this service will be hosting any actors, add them here
-    'dapr.actors'                  => [],
+    'dapr.actors'                  => [InventoryActor::class, BinActor::class],
 
     // if this service will be hosting any actors, configure how long until dapr should consider an actor idle
     'dapr.actors.idle_timeout'     => null,

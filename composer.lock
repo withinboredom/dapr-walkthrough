@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dapr/php-sdk.git",
-                "reference": "5f156377059934c9357e908faf0fac97c8e6a0af"
+                "reference": "8f32790b2eee59acfa0acab147c07f2d31d31d51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dapr/php-sdk/zipball/5f156377059934c9357e908faf0fac97c8e6a0af",
-                "reference": "5f156377059934c9357e908faf0fac97c8e6a0af",
+                "url": "https://api.github.com/repos/dapr/php-sdk/zipball/8f32790b2eee59acfa0acab147c07f2d31d31d51",
+                "reference": "8f32790b2eee59acfa0acab147c07f2d31d31d51",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "issues": "https://github.com/dapr/php-sdk/issues",
                 "source": "https://github.com/dapr/php-sdk/tree/add/gprc"
             },
-            "time": "2021-02-02T22:54:09+00:00"
+            "time": "2021-02-03T23:20:59+00:00"
         },
         {
             "name": "laminas/laminas-httphandlerrunner",

@@ -4,7 +4,7 @@ A walkthrough on how to use Dapr and the PHP SDK.
 
 ## Part 1
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GopR-38SvGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![View Part 1 Here](doc/part1.gif)](https://youtu.be/GopR-38SvGo)
 
 # Development
 

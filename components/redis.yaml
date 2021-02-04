@@ -10,6 +10,8 @@ spec:
     - name: redisHost
       value: redis-master:6379
     - name: redisPassword
-      value: GCm8b36aYz
+      secretKeyRef:
+        name: redis
+        key: redis-password
     - name: actorStateStore
       value: "true"

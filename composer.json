@@ -17,13 +17,11 @@
         "start": [
             "PHP_CLI_SERVER_WORKERS=10 dapr run --app-max-concurrency 10 -a dev -p 3000 -- php -S 0.0.0.0:3000 -t src"
         ],
-        "start-prod": [
-            "docker rm -f picker",
-            "dapr run --app-max-concurrency 100 -a picker -p 3000 -- docker run -p 3000:3000 --name picker picker:latest"
-        ],
         "build": [
-            "docker build -t withinboredom/picker:latest .",
-            "docker build -f images/Caddy.Dockerfile -t withinboredom/picker:caddy ."
+            "DOCKER_BUILDKIT=1 docker build --pull -t withinboredom/picker:latest .",
+            "DOCKER_BUILDKIT=1 docker build --pull -f images/Caddy.Dockerfile -t withinboredom/picker:caddy .",
+            "docker push withinboredom/picker:latest",
+            "docker push withinboredom/picker:caddy"
         ]
     },
     "autoload": {

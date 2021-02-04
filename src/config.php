@@ -10,7 +10,7 @@ use function DI\env;
 
 return [
     // Generate a new proxy on each request - recommended for development
-    'dapr.actors.proxy.generation' => ProxyFactory::GENERATED,
+    'dapr.actors.proxy.generation' => env('GENERATION_MODE', ProxyFactory::GENERATED),
 
     // put any subscriptions here
     'dapr.subscriptions'           => [

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab892e97c8363115f3987d71cb0a61aa",
+    "content-hash": "7bfd136bd64909f3c0622ee62d4da3b2",
     "packages": [
         {
             "name": "dapr/php-sdk",
-            "version": "dev-add/gprc",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dapr/php-sdk.git",
-                "reference": "8f32790b2eee59acfa0acab147c07f2d31d31d51"
+                "reference": "ffe7fd2a8d823d0705e1cf89b41715c20e04bff5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dapr/php-sdk/zipball/8f32790b2eee59acfa0acab147c07f2d31d31d51",
-                "reference": "8f32790b2eee59acfa0acab147c07f2d31d31d51",
+                "url": "https://api.github.com/repos/dapr/php-sdk/zipball/ffe7fd2a8d823d0705e1cf89b41715c20e04bff5",
+                "reference": "ffe7fd2a8d823d0705e1cf89b41715c20e04bff5",
                 "shasum": ""
             },
             "require": {
@@ -40,6 +40,7 @@
                 "phpunit/phpunit": "^9",
                 "vimeo/psalm": "^4.3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -60,9 +61,9 @@
             "description": "Dapr Implementation in PHP",
             "support": {
                 "issues": "https://github.com/dapr/php-sdk/issues",
-                "source": "https://github.com/dapr/php-sdk/tree/add/gprc"
+                "source": "https://github.com/dapr/php-sdk/tree/main"
             },
-            "time": "2021-02-03T23:20:59+00:00"
+            "time": "2021-02-04T21:11:23+00:00"
         },
         {
             "name": "laminas/laminas-httphandlerrunner",
